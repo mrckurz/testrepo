@@ -1,6 +1,6 @@
 public interface BinarySearchTree<T extends Comparable<T>> {
 	
-	// Inserts elem into the tree. Duplicates and null is not allowed
+	// Inserts element into the tree. Duplicates and null is not allowed
 	public void insert(T elem) throws IllegalArgumentException;
 
 	// Returns the element with the key or null if not found
