@@ -20,7 +20,7 @@ public interface BinarySearchTree<T extends Comparable<T>> {
 	// Returns an array representation of the tree in pre-order-traversal
 	public Object[] toArrayPreOrder();
 
-	// Retruns the parent-node of the key. Null if not found
+	// Returns the parent-node of the key. Null if not found
 	public T getParent(T key) throws IllegalArgumentException; // Returns true if the key is the root, false otherwise
 
 	public boolean isRoot(T key) throws IllegalArgumentException; // True if the key is an internal node, false
