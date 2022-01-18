@@ -6,7 +6,7 @@ public interface BinarySearchTree<T extends Comparable<T>> {
 	// Returns the element with the key or null if not found
 	public T find(T key) throws IllegalArgumentException;
 
-	// Removes the element with the key. Returns true if eleme has been found
+	// Removes the element with the key. Returns true if element has been found
 	public boolean remove(T key) throws IllegalArgumentException; // Returns the number of elements in the tree
 
 	public int size();
