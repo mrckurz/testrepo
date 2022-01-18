@@ -19,6 +19,7 @@ public class MyBinarySearchTree<T extends Comparable<T>> implements BinarySearch
 		size = 0;
 	}
 	
+	//neues KOmmentar
 	///////////////////////////////////////////////////////
 	// Methoden des Interface
 	///////////////////////////////////////////////////////
