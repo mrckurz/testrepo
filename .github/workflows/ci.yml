@@ -1,7 +1,21 @@
 name: CI
 on: [push, pull_request]
 jobs:
-  hello:
+  build-test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, CI!"
+      - uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Build & Test
+        run: mvn -B -DskipTests=false test
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: target/surefire-reports
